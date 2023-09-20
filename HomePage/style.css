@@ -7,6 +7,7 @@
 }
 
 .main {
+  max-width: 750px;
   margin: auto;
   background-image: url("https://preview.colorlib.com/theme/coffeeblend/images/bg_4.jpg");
 }
@@ -488,7 +489,7 @@ footer div {
   margin-right: 3%;
 }
 
-@media (min-width: 751px) {
+/* @media (min-width: 751px) {
   *{
     margin: 0;
     padding: 0;
@@ -558,4 +559,4 @@ footer div {
     display: flex;
     height: 28vh;
   }
-}
+} */
