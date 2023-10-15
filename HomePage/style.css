@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;700&family=Poppins&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .main {
-  max-width: 750px;
   margin: auto;
   background-image: url("https://preview.colorlib.com/theme/coffeeblend/images/bg_4.jpg");
 }
@@ -87,12 +86,16 @@ button a {
 
 .middleText {
   width: 80%;
-  display: grid;
-  place-items: center;
+  top: 25%;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
 }
 
 img {
-  filter:opacity(0.62);
+  filter: opacity(0.62);
 }
 
 .thirdPartSection {
@@ -135,7 +138,8 @@ img {
   border-bottom: 0;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: transparent;
   border: 0;
   color: white;
@@ -205,11 +209,12 @@ button:hover {
 .iconBorder {
   border: 1px solid black;
   margin-bottom: 5%;
-  width: 15%;
+  width: 15vh;
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: unset;
 }
 
 .iconBorder i {
@@ -238,7 +243,7 @@ button:hover {
   height: 300px;
 }
 
-.menuPictures img{
+.menuPictures img {
   width: 100%;
   height: 100%;
   filter: opacity(1);
@@ -248,14 +253,13 @@ button:hover {
 .counterPart {
   background-image: url("https://preview.colorlib.com/theme/coffeeblend/images/menu-2.jpg");
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
   padding: 3%;
 }
 
 .secondIconBorder {
   border: 1px solid #fcbb60;
-  width: 10%;
-  height: 12vh;
 }
 
 .secondIconBorder i {
@@ -263,7 +267,7 @@ button:hover {
 }
 
 .secondIconBorder:hover {
-  transform: rotate(45deg);
+  transform: rotate(135deg);
   background-color: #fcbb60;
   color: #000;
 }
@@ -285,7 +289,7 @@ button:hover {
   margin-top: 5%;
 }
 
-.price h4{
+.price h4 {
   color: white;
 }
 
@@ -298,7 +302,7 @@ button:hover {
 }
 
 .hiddenDiv {
-  width: 9%;
+  width: 10vh;
   height: 10vh;
   background-color: #c49b63;
   display: flex;
@@ -324,7 +328,8 @@ button:hover {
   padding: 2%;
 }
 
-.menuSection div:first-child, .menuSection div:hover {
+.menuSection div:first-child,
+.menuSection div:hover {
   color: black;
   background-color: #c49b63;
   border: 0;
@@ -337,7 +342,7 @@ button:hover {
   padding: 0;
 }
 
- .testimony img {
+.testimony img {
   width: 100%;
   height: 50vh;
   object-fit: cover;
@@ -354,7 +359,7 @@ button:hover {
   margin: 0;
   padding: 0;
   color: white;
-  
+
 }
 
 .colorPartSections {
@@ -465,16 +470,20 @@ footer h4 {
   font-size: 32px;
 }
 
+.recentBlogPart {
+  display: flex;
+}
+
+.blogWrites {
+  margin-top: 0;
+}
+
 .recentBlogPart img {
-  width: 20%;
-  height: 15vh;
+  width: 17vh;
+  height: 17vh;
   object-fit: cover;
   filter: opacity(1.0);
   margin-right: 5%;
-}
-
-.recentBlogPart {
-  display: flex;
 }
 
 footer div {
@@ -485,18 +494,14 @@ footer div {
   margin-block: 10%;
 }
 
-.footerMainDivs:last-child i{
+.footerMainDivs:last-child i {
   margin-right: 3%;
 }
 
-/* @media (min-width: 751px) {
-  *{
+@media (min-width: 751px) {
+  * {
     margin: 0;
     padding: 0;
-  }
-
-  .main {
-    margin: 0;
   }
 
   .mobile-container {
@@ -521,42 +526,241 @@ footer div {
     color: white;
     text-decoration: none;
   }
-  
+
   .mark {
     width: 35%;
     background-color: transparent !important;
     text-align: center;
   }
 
+  .justThirdSection {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .section {
     display: flex;
-    width: 60%;
-    margin-block: 0;
-    margin: auto;
+    justify-content: space-between;
   }
 
   .info {
-    width: 25%;
+    width: 30%;
   }
 
-  .aside{
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
+  .firstAside {
     position: relative;
+    margin-top: -5%;
+    padding: 2%;
+    width: 45%;
+    height: 20%;
+  }
+
+  .aside {
+    display: flex;
+    flex-wrap: wrap; 
   }
 
   .aside div {
-    width: 40%;
     margin-right: 5%;
+    width: 45%;
   }
 
   .aside h5 {
     width: 80%;
+  } 
+
+  .backSpace {
+    width: 50%;
   }
 
-  .thirdPartSection {
+  .picturePart {
     display: flex;
-    height: 28vh;
+    align-items: center;
   }
-} */
+
+  .firstDicover {
+    width: 50%;
+    padding: 2%;
+    position: relative;
+    margin-left: -15%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .coffeeColorPart {
+    display: flex; 
+  }
+
+  .iconSection {
+    margin-inline: 2%;
+  }
+
+  .firstcoffeePictures:nth-child(odd) {
+    margin-top: -1%;
+  }
+
+  .firstDiscoverDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .firstSubheading {
+    text-align: right;
+    width: 50%;
+  }
+
+  .picturesAllParts {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .firstcoffeePictures {
+    width: 40%;
+    height: 27vh;
+    margin-inline: 5%;
+  }
+
+  .counterPart {
+    height: 50vh;
+    background-attachment: fixed;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fourIcon {
+    margin-inline: 5%;
+  }
+
+  .subheadingDiv {
+    width: 90%;
+  }
+
+  .menuPicturesDiv {
+    width: 20%;
+    margin-right: 2%;
+  }
+
+  .coffeeMenuDivs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fullPictures {
+    display: flex;
+  }
+
+  .hiddenDiv {
+    margin: 0;
+    margin-top: -12%;
+    margin-left: 10%;
+  }
+
+  .fullPictures img {
+    height: 100%;
+  }
+
+  .dishMenuPartsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menuSection {
+    width: 90%;
+    display: flex;
+    justify-content: center; 
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .dishMenuDivs {
+    width: 30%;
+    margin-right: 2%;
+  }
+
+  .testimony img {
+    filter: blur(0);
+  }
+
+  .testimonySecondDiv {
+    margin-top: -22%;
+  }
+
+  .secondCoffeeColorPart {
+    display: flex;
+  }
+
+  .colorPartSections {
+    width: 20%;
+    padding: 2%;
+  }
+
+  .profil img {
+    width: 20%;
+  }
+
+  .blogSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .blogSection div {
+    margin-block: 2%;
+  }
+
+  .recentDivs {
+    width: 30%;
+    margin-right: 3%;
+  }
+
+  .writeTabs {
+    width: 80%;
+    margin: 0;
+  }
+
+  .writeTabs h3 {
+    margin-block: 3%;
+  }
+
+  .writeTabs p {
+    width: 50%;
+    margin: auto;
+  }
+
+  .mapBookPart {
+    display: flex;
+    background-color: #000;
+  }
+
+  .mapouter,
+  .bookSecondPart {
+    width: 50%;
+  }
+
+  .aside h4 {
+    width: 80%;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  .footerMainDivs {
+    width: 40%;
+    margin-right: 5%;
+    margin-block: 0;
+  }
+
+  /* .littlePart {
+    width: 10%;
+  } */
+}
