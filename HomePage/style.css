@@ -301,18 +301,30 @@ button:hover {
   width: 100%;
 }
 
+.fullPicturesDivs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hiddenDiv {
-  width: 10vh;
-  height: 10vh;
+  width: 50px;
+  height: 50px;
   background-color: #c49b63;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: -35%;
-  margin-left: 50%;
   color: white;
-  transform: rotate(45deg);
+  transform: rotate(0deg);
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.hiddenDiv i {
+  line-height: 1;
+  font-weight: 900;
 }
 
 .menuSection {
@@ -512,6 +524,9 @@ footer div {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: block !important;
     background-color: transparent !important;
+    z-index: 10;
+    transform: translateY(0%);
+    transition: all 0.6s;
   }
 
   .links {
@@ -651,12 +666,6 @@ footer div {
 
   .fullPictures {
     display: flex;
-  }
-
-  .hiddenDiv {
-    margin: 0;
-    margin-top: -12%;
-    margin-left: 10%;
   }
 
   .fullPictures img {

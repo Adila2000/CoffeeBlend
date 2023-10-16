@@ -8,20 +8,42 @@ function myFunction() {
   }
 
 
+  const header = document.querySelector('.compNav');
+
+  console.log(header);
+
+  document.addEventListener('scroll', (e) => {
+      if (window.scrollY > 300) {
+        header.style.display = 'block';
+        header.style.position = 'sticky';
+        header.style.top = '0';
+        header.style.transform = 'translateY(0%)'
+      } else {
+        header.style.transform = 'translateY(-100%)'
+      }
+
+      if (window.scrollY < 108) {
+        header.style.transform = 'translateY(0%)';
+      }
+  })
+
+
   const allPictures = document.querySelector('.fullPictures').children;
 
   function onHoverImg(index) {
     const findedELement = allPictures[index];
     const hiddenEl = findedELement.querySelector('.hiddenDiv');
 
-      hiddenEl.style.display = 'block';
+      hiddenEl.style.opacity = '1';
+      hiddenEl.style.transform = 'rotate(135deg)';
   }
 
   function onHoverOutImg(index) {
     const findedELement = allPictures[index];
     const hiddenEl = findedELement.querySelector('.hiddenDiv');
 
-      hiddenEl.style.display = 'none';
+      hiddenEl.style.opacity = '0';
+      hiddenEl.style.transform = 'rotate(0deg)';
   }
 
 
