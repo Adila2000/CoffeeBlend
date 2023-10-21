@@ -9,23 +9,31 @@ function myFunction() {
 
 
   const header = document.querySelector('.compNav');
-
+  const headerMobile = document.querySelector('.mobile-container');
   console.log(header);
 
-  document.addEventListener('scroll', (e) => {
+  if (screen.width >= 751) {
+    document.addEventListener('scroll', (e) => {
       if (window.scrollY > 300) {
         header.style.display = 'block';
-        header.style.position = 'sticky';
+        header.style.position = 'sticky';  
         header.style.top = '0';
-        header.style.transform = 'translateY(0%)'
+        header.style.transform = 'translateY(0%)';
+        header.style.backgroundColor = 'black';
       } else {
-        header.style.transform = 'translateY(-100%)'
+        header.style.transform = 'translateY(-100%)';
+        header.style.position = "absolute";
+        header.style.backgroundColor = "transparent";
       }
 
       if (window.scrollY < 108) {
         header.style.transform = 'translateY(0%)';
       }
   })
+  } else {
+    header.style.display = 'none';
+  }
+  
 
 
   const allPictures = document.querySelector('.fullPictures').children;
@@ -57,8 +65,7 @@ let dessertButton = document.querySelector(".dessertButton");
 let menu = document.querySelector(".menu");
 
 if (screen.width <= 751) {
-
-    function showDrinkMenu() {
+  function showDrinkMenu() {
     dishMenu.style.display = "none";
     menu.style.display = "flex !important";
     menu.style.flexDirection = "column !important";
@@ -71,37 +78,39 @@ if (screen.width <= 751) {
     dessertButton.style.backgroundColor = 'transparent';
     dessertButton.style.color = "#c49b63";
     dessertButton.style.borderBottom = "1px solid #c49b63";
-    }
+  }
 
-    function showDishMenu() {
-      dishMenu.style.display = "block";
-      drinkMenu.style.display = "none";
-      dessertMenu.style.display = "none";
-      dishButton.style.backgroundColor = "#c49b63";
-      dishButton.style.color = "black";
-      drinkButton.style.backgroundColor = 'transparent';
-      drinkButton.style.color = "#c49b63";
-      drinkButton.style.borderBottom = "1px solid #c49b63";
-      dessertButton.style.backgroundColor = 'transparent';
-      dessertButton.style.color = "#c49b63";
-      dessertButton.style.borderBottom = "1px solid #c49b63";
-      }
+  function showDishMenu() {
+    dishMenu.style.display = "block";
+    drinkMenu.style.display = "none";
+    dessertMenu.style.display = "none";
+    dishButton.style.backgroundColor = "#c49b63";
+    dishButton.style.color = "black";
+    drinkButton.style.backgroundColor = 'transparent';
+    drinkButton.style.color = "#c49b63";
+    drinkButton.style.borderBottom = "1px solid #c49b63";
+    dessertButton.style.backgroundColor = 'transparent';
+    dessertButton.style.color = "#c49b63";
+    dessertButton.style.borderBottom = "1px solid #c49b63";
+  }
 
-      function showDessertMenu() {
-        dishMenu.style.display = "none";
-        drinkMenu.style.display = "none";
-        dessertMenu.style.display = "block";
-        dessertMenu.style.flexDirection = "column !important";
-        dessertButton.style.backgroundColor = "#c49b63";
-        dessertButton.style.color = "black";
-        dishButton.style.backgroundColor = 'transparent';
-        dishButton.style.color = "#c49b63";
-        dishButton.style.borderBottom = "1px solid #c49b63";
-        drinkButton.style.backgroundColor = 'transparent';
-        drinkButton.style.color = "#c49b63";
-        drinkButton.style.borderBottom = "1px solid #c49b63";
-        }
-} else {
+  function showDessertMenu() {
+    dishMenu.style.display = "none";
+    drinkMenu.style.display = "none";
+    dessertMenu.style.display = "block";
+    dessertMenu.style.flexDirection = "column !important";
+    dessertButton.style.backgroundColor = "#c49b63";
+    dessertButton.style.color = "black";
+    dishButton.style.backgroundColor = 'transparent';
+    dishButton.style.color = "#c49b63";
+    dishButton.style.borderBottom = "1px solid #c49b63";
+    drinkButton.style.backgroundColor = 'transparent';
+    drinkButton.style.color = "#c49b63";
+    drinkButton.style.borderBottom = "1px solid #c49b63";
+  }
+} 
+
+else if (screen.width >= 750){
   function showDrinkMenu() {
     dishMenu.style.display = "none";
     drinkMenu.style.display = "flex";

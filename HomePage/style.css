@@ -11,15 +11,23 @@
   background-image: url("https://preview.colorlib.com/theme/coffeeblend/images/bg_4.jpg");
 }
 
+.carousel {
+  position: relative;
+}
+
 .mobile-container {
   color: white;
   border-radius: 10px;
+  position: sticky;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #000;
-  position: relative;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .topnav #myLinks {
@@ -518,15 +526,16 @@ footer div {
 
   .mobile-container {
     display: none;
-  }
+  } 
 
   .compNav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: block !important;
-    background-color: transparent !important;
-    z-index: 10;
-    transform: translateY(0%);
-    transition: all 0.6s;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
   }
 
   .links {
@@ -540,6 +549,10 @@ footer div {
   .links a {
     color: white;
     text-decoration: none;
+  }
+
+  .links a:hover {
+    color: #c49b63;
   }
 
   .mark {
@@ -768,8 +781,4 @@ footer div {
     margin-right: 5%;
     margin-block: 0;
   }
-
-  /* .littlePart {
-    width: 10%;
-  } */
 }

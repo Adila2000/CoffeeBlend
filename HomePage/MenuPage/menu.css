@@ -161,6 +161,71 @@ footer div {
     margin-right: 3%;
 }
 
+.thirdPartSection {
+    background-color: #000;
+    color: white;
+  }
+  
+  .section p {
+    color: rgb(105, 100, 100);
+  }
+  
+  .aside {
+    background-color: #c49b63;
+    padding: 5%;
+  }
+  
+  .info i {
+    color: #c49b63;
+    margin-right: 7%;
+  }
+  
+  .section {
+    padding: 5%;
+  }
+  
+  .info {
+    display: flex;
+  }
+  
+  .time {
+    margin-left: 3%;
+  }
+  
+  .aside div {
+    margin-block: 3%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .aside div:last-child {
+    border-bottom: 0;
+  }
+  
+  input,
+  textarea {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    width: 100%;
+  }
+  
+  ::placeholder {
+    color: rgb(248, 237, 237);
+  }
+  
+  .aside button {
+    border: 0;
+    width: 100%;
+  }
+  
+  .asideButton {
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: black;
+    color: white;
+  }
 
 @media (min-width: 751px) {
     * {
@@ -196,13 +261,53 @@ footer div {
 
     .links a:hover {
         color: #c49b63;
-    }
+      }
 
     .mark {
         width: 35%;
         background-color: transparent !important;
         text-align: center;
     }
+
+    .justThirdSection {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .section {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .info {
+        width: 30%;
+      }
+    
+      .firstAside {
+        position: relative;
+        margin-top: -5%;
+        padding: 2%;
+        width: 45%;
+        height: 20%;
+      }
+    
+      .aside {
+        display: flex;
+        flex-wrap: wrap; 
+      }
+    
+      .aside div {
+        margin-right: 5%;
+        width: 45%;
+      }
+    
+      .aside h5 {
+        width: 80%;
+      } 
+    
+      .backSpace {
+        width: 50%;
+      }
 
     footer {
         display: flex;
